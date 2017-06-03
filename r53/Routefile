@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+hosted_zone "prpr-antena.com." do
+  rrset "prpr-antena.com.", "A" do
+    ttl 86400
+    resource_records(
+      "133.242.187.194"
+    )
+  end
+
+  rrset "prpr-antena.com.", "MX" do
+    ttl 300
+    resource_records(
+      "10 mail.prpr-antena.com"
+    )
+  end
+
+  rrset "mail.prpr-antena.com.", "A" do
+    ttl 300
+    resource_records(
+      "133.242.187.194"
+    )
+  end
+end
