@@ -8,4 +8,4 @@ https://github.com/codenize-tools/roadworker
 * apply
   * be roadwork --apply -f r53/Routefile --profile ops
 * test
-  * be roadwork --export -o r53/Routefile --profile ops
+  * be roadwork --test -f r53/Routefile --profile ops
