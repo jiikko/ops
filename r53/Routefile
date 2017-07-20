@@ -9,16 +9,29 @@ hosted_zone "prpr-antena.com." do
   end
 
   rrset "prpr-antena.com.", "MX" do
-    ttl 300
+    ttl 3000
     resource_records(
       "10 mail.prpr-antena.com"
     )
   end
 
   rrset "mail.prpr-antena.com.", "A" do
-    ttl 300
+    ttl 3000
     resource_records(
       "133.242.187.194"
+    )
+  end
+end
+
+hosted_zone "pc-keyboard.info." do
+  rrset "pc-keyboard.info.", "A" do
+    dns_name "s3-website-ap-northeast-1.amazonaws.com."
+  end
+
+  rrset "www.pc-keyboard.info.", "CNAME" do
+    ttl 600
+    resource_records(
+      'www.pc-keyboard.info.herokudns.com'
     )
   end
 end
