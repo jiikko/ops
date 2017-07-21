@@ -25,20 +25,20 @@ end
 
 hosted_zone "pc-keyboard.info." do
   rrset "pc-keyboard.info.", "A" do
-    dns_name "s3-website-ap-northeast-1.amazonaws.com."
-  end
-
-  rrset "www.pc-keyboard.info.", "CNAME" do
-    ttl 600
-    resource_records(
-      'www.pc-keyboard.info.herokudns.com'
-    )
+    dns_name "d245o25tzzofvq.cloudfront.net."
   end
 
   rrset "pc-keyboard.info.", "MX" do
     ttl 300
     resource_records(
       "10 mail.instance-email.com"
+    )
+  end
+
+  rrset "www.pc-keyboard.info.", "CNAME" do
+    ttl 600
+    resource_records(
+      "www.pc-keyboard.info.herokudns.com"
     )
   end
 end
