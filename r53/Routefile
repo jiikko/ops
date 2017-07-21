@@ -34,4 +34,11 @@ hosted_zone "pc-keyboard.info." do
       'www.pc-keyboard.info.herokudns.com'
     )
   end
+
+  rrset "pc-keyboard.info.", "MX" do
+    ttl 300
+    resource_records(
+      "10 mail.instance-email.com"
+    )
+  end
 end
